@@ -1,0 +1,15 @@
+# Helm values para External Secrets Operator (ESO)
+#
+# Configura el controller para redirigir las llamadas a AWS Secrets Manager
+# hacia LocalStack en lugar del endpoint real de AWS.
+#
+# Instalar / actualizar con:
+#   helm repo add external-secrets https://charts.external-secrets.io
+#   helm repo update
+#   helm upgrade --install external-secrets external-secrets/external-secrets \
+#     -n external-secrets --create-namespace \
+#     --values apps/external-secrets/values.yaml
+
+extraEnv:
+  - name: AWS_ENDPOINT_URL_SECRETS_MANAGER
+    value: "http://localstack.localstack.svc.cluster.local:4566"

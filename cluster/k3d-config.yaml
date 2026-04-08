@@ -1,0 +1,13 @@
+# Configuración del cluster k3d para bots de Telegram
+apiVersion: k3d.io/v1alpha5
+kind: Simple
+metadata:
+  name: telegram-bots
+servers: 1
+agents: 0
+options:
+  k3s:
+    extraArgs:
+      - arg: --disable=traefik  # No necesitamos ingress para bots de polling
+        nodeFilters:
+          - server:*

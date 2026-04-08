@@ -1,0 +1,4 @@
+# Secrets nunca van al repo
+**/secret.yaml
+**/*.env
+.env*
