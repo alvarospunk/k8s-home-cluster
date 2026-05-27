@@ -6,7 +6,7 @@ Infraestructura base para correr bots de Telegram en local con k3d (Apple Silico
 
 | Componente | Descripción |
 |---|---|
-| **k3d** | Cluster k3s dentro de Docker. Nombre: `telegram-bots` |
+| **k3d** | Cluster k3s dentro de Docker. Nombre: `poc-tooling` |
 | **LocalStack** | Simula AWS Secrets Manager. Namespace: `localstack` |
 | **ESO** | External Secrets Operator. Sincroniza secrets de LocalStack a k8s |
 
@@ -35,7 +35,7 @@ brew install k3d helm kubectl
 ```
 
 El script:
-1. Crea el cluster k3d `telegram-bots`
+1. Crea el cluster k3d `poc-tooling`
 2. Despliega LocalStack en el namespace `localstack`
 3. Instala ESO via Helm apuntando a LocalStack
 

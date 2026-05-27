@@ -1,5 +1,5 @@
 #!/bin/bash
-# bootstrap.sh — Levanta la infraestructura base del cluster telegram-bots desde cero.
+# bootstrap.sh — Levanta la infraestructura base del cluster poc-tooling desde cero.
 #
 # Requisitos previos:
 #   brew install k3d helm kubectl
@@ -10,7 +10,7 @@
 
 set -e
 
-CLUSTER_NAME="telegram-bots"
+CLUSTER_NAME="poc-tooling"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo "🏗️  k8s-home-cluster bootstrap"

@@ -1,10 +1,15 @@
-# Configuración del cluster k3d para bots de Telegram
+# k3d cluster config
 apiVersion: k3d.io/v1alpha5
 kind: Simple
 metadata:
-  name: telegram-bots
+  name: poc-tooling
 servers: 1
 agents: 0
+registries:
+  create:
+    name: somnia-registry.localhost
+    host: "0.0.0.0"
+    hostPort: "5050"
 options:
   k3s:
     extraArgs:
